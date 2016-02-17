@@ -15,26 +15,6 @@ public class PointBuilder {
 		return new PointBuilder(id);
 	}
 
-	public PointBuilder id(String id) {
-		point.setId(id);
-		return this;
-	}
-
-	public PointBuilder name(String name) {
-		point.setName(name);
-		return this;
-	}
-
-	public PointBuilder latitude(double latitude) {
-		point.setLatitude(latitude);
-		return this;
-	}
-
-	public PointBuilder longitude(double longitude) {
-		point.setLongitude(longitude);
-		return this;
-	}
-
 	public PointBuilder link(String targetId, int distance) {
 		point.getLinks().add(new Link(targetId, distance));
 		return this;

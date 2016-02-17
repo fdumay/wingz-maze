@@ -1,7 +1,6 @@
 package com.wingz.maze.domain;
 
 import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
 
 import java.io.Serializable;
 
@@ -33,21 +32,6 @@ public class Link implements Serializable {
 
 	public void setDistance(int distance) {
 		this.distance = distance;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hashCode(id, distance);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (obj instanceof Link) {
-			Link other = (Link) obj;
-			return Objects.equal(id, other.id)
-				&& Objects.equal(distance, other.distance);
-		}
-		return false;
 	}
 
 	@Override

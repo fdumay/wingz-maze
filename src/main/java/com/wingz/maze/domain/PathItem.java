@@ -65,9 +65,9 @@ public class PathItem implements Comparable<PathItem> {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return MoreObjects.toStringHelper(this).add("id", id).add("fromBegining", distanceFromBegining).add("distance",
-			distance)
+		return MoreObjects.toStringHelper(this)
+			.add("id", id).add("fromBegining", distanceFromBegining)
+			.add("distance", distance)
 			.toString();
 	}
 }
