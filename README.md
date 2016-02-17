@@ -42,14 +42,24 @@ Fault of time the Javadoc is not present.
 
 ## API
 
+```
 GET /map
+```
+
 List the available maps loaded from https://wingz-hiring-test.herokuapp.com
 
+````
 GET /map/{mapId}
-@mapId is mandatory
+````
+
+- @mapId is mandatory
+
 Return the map loaded from https://wingz-hiring-test.herokuapp.com
 
+```
 GET /solve?start={startId}&end={endId}&mapId={mapId}
-@startId is mandatory
-@endId is mandatory
-@mapId is not mandatory, the default value is map1.json
+````
+
+- @startId is mandatory
+- @endId is mandatory
+- @mapId is not mandatory, the default value is map1.json
