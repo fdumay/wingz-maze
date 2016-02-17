@@ -10,7 +10,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Test;
@@ -37,7 +36,6 @@ public class MapControllerTest {
 		MvcResult result = mockMvc
 			.perform(get(MapController.MAPS_PATH))
 			.andExpect(status().isOk())
-			.andDo(print())
 			.andReturn();
 
 		assertNotNull(result);
@@ -51,7 +49,6 @@ public class MapControllerTest {
 		MvcResult result = mockMvc
 			.perform(get(MapController.MAP_PATH, "map1.json"))
 			.andExpect(status().isOk())
-			.andDo(print())
 			.andReturn();
 
 		assertNotNull(result);
@@ -65,7 +62,6 @@ public class MapControllerTest {
 		MvcResult result = mockMvc
 			.perform(get(MapController.MAP_PATH, "map1"))
 			.andExpect(status().isOk())
-			.andDo(print())
 			.andReturn();
 
 		assertNotNull(result);
