@@ -1,3 +1,5 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 apply plugin: 'java'
 apply plugin: 'spring-boot'
 apply plugin: 'eclipse'
@@ -29,3 +31,20 @@ dependencies {
 	compile "org.springframework.boot:spring-boot-starter-test:1.2.8.RELEASE"
 	
 }
+
+sourceSets {
+	main {
+		resources {
+			srcDir 'build/bower/'
+		}
+	}
+}
+	
+task bowerInstall(type: Exec) {
+	String bowerExecutable = Os.isFamily(Os.FAMILY_WINDOWS) ? "bower.cmd" : "/usr/local/bin/bower";
+	executable = bowerExecutable
+	args = ["install"]
+}
+
+processResources.dependsOn bowerInstall
+

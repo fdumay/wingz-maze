@@ -1,0 +1,45 @@
+<div id="waze">
+	<ui-gmap-google-map 
+		center='map.center' 
+		zoom='map.zoom' 
+		options='map.options' 
+		control='map.control'>
+		
+		<ui-gmap-polyline path="path"></ui-gmap-polyline>
+	</ui-gmap-google-map>
+
+	<div class="formPanel">
+		<md-autocomplete
+			md-selected-item="startPoint"
+			md-search-text="startPointText"
+			md-items="point in searchPoint(startPointText)"
+			md-item-text="point.name"
+			md-min-length="0"
+			md-selected-item-change="selectedPointChange(point)"
+			placeholder="Choose the start place"
+			>
+			<md-item-template>
+				<span md-highlight-text="startPointText" md-highlight-flags="^i">{{point.name}}</span>
+			</md-item-template>
+			<md-not-found>No match for "{{startPointText}}".</md-not-found>
+		</md-autocomplete>
+		<md-autocomplete
+			md-selected-item="endPoint"
+			md-search-text="endPointText"
+			md-items="point in searchPoint(endPointText)"
+			md-item-text="point.name"
+			md-selected-item-change="selectedPointChange(point)"
+			md-min-length="0"
+			placeholder="Choose the destination">
+			<label>To</label>
+			<md-item-template>
+				<span md-highlight-text="endPointText" md-highlight-flags="^i">{{point.name}}</span>
+			</md-item-template>
+			<md-not-found>No match for "{{endPointText}}".</md-not-found>
+		</md-autocomplete>
+      
+<!--       	<md-datepicker ng-model="filters.minDate" md-placeholder="Date de début" layout-margin></md-datepicker> -->
+<!-- 		<md-datepicker ng-model="filters.maxDate" md-placeholder="Date de fin" layout-margin></md-datepicker> -->
+<!-- 		<md-button class="md-raised md-primary" ng-href="{{getKmlUrl()}}" target="_blank">Go</md-button> -->
+	</div>
+</div>

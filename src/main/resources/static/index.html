@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<base href="/">
+
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Wingz Waze</title>
+
+<script src="components/scriptjs/dist/script.min.js"></script>
+<script>
+	// load all of the dependencies asynchronously.
+	$script([
+	        'components/jquery/dist/jquery.min.js',
+			'components/lodash/lodash.min.js',
+			'components/angular/angular.min.js',
+			], 'core');
+	$script.ready('core', function() {
+		$script([
+			'components/angular-route/angular-route.min.js',
+			'components/angular-simple-logger/dist/angular-simple-logger.min.js',
+			'components/angular-google-maps/dist/angular-google-maps.js',
+			'components/angular-animate/angular-animate.min.js',
+			'components/angular-material/angular-material.min.js',
+			'components/angular-aria/angular-aria.min.js',
+			'components/angucomplete-alt/dist/angucomplete-alt.min.js',
+			'js/app.js',
+			'js/waze.js'
+			], 'full');
+		});
+
+	$script.ready([ 'full' ], function() {
+		angular.bootstrap(document, [ 'wingz' ]);
+	});
+</script>
+
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+<link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="components/angular-material/angular-material.min.css">
+
+
+
+<style>
+[ng-cloak] {
+	display: none !important;
+}
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
+</style>
+</head>
+<body ng-cloak>
+	<div ng-view></div>
+</body>
+</html>

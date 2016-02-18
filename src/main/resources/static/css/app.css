@@ -1,0 +1,23 @@
+html { height: 100% }
+body { height: 100%; margin: 0px; padding: 0px }
+
+.angular-google-map, .angular-google-map-container {
+	height: calc(100vh);
+	width: 100%;
+	min-height: 500px;
+	min-width: 500px;
+}
+
+#waze{
+	height: calc(100vh);
+	width: 100%;
+	position: relative;
+}
+
+#waze .formPanel{
+	height: 100px;
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "wingz-waze",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "scriptjs": "2.5.7",
+    "angular": "1.4.7",
+    "angular-route": "1.4.7",
+    "lodash": "3.10.1",
+    "font-awesome": "4.3.0",
+    "angular-google-maps": "2.2.1",
+    "angucomplete-alt": "1.0.7",
+    "angular-material": "~1.0.1",
+    "jquery": "*"
+  },
+  "resolutions": {
+    "angular": "1.4.7"
+  }
+}
