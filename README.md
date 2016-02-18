@@ -6,11 +6,6 @@ Allow to resolve shorter path from a point A to B.
 The data are provided from https://wingz-hiring-test.herokuapp.com.
 The graph shorter path resolver is a simple implementation of the Dijkstra algorithm.
 
-## Report
-
-Tested with a coverage of 89.9%
-Fault of time the Javadoc is not present.
-
 ## Requirements
 
 - java8
@@ -28,17 +23,20 @@ gradle build
 gradle bootRun
 ```
 
-## Test
+## Test report
 
-```
-gradle bootRun
-```
-
+19 green tests
 Tested with a coverage of 89.9%
 
-## Doc
+## JavaDoc
 
-Fault of time the Javadoc is not present.
+The Javadoc is not present.
+
+## UI
+
+http://localhost:8080/
+
+![Sreenshot](https://raw.githubusercontent.com/fdumay/wingz-maze/master/src/main/resources/static/images/sreenshot.png)
 
 ## API
 
